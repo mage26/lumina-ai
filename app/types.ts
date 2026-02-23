@@ -16,7 +16,7 @@ export type colorsType = {
 export type analysisType = {
     compositionScore: number;
     compositionAnalysis: string;
-    primarySubjects: string;
-    spacialAnalysis: string;
-    suggestedImprovements: string;
+    primarySubjects: string[];
+    spatialAnalysis: string;
+    improvements: string;
 }

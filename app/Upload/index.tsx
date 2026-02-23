@@ -56,7 +56,7 @@ export default function UploadSection({uploadDisabled, onUploadBegin, onUploadCo
     });
 
     return (
-       <section className="bg-foreground p-16 min-h-screen text-center w-full relative mx-auto flex flex-col gap-6">
+       <section className="bg-foreground p-5 md:p-16 min-h-[calc(100vh-240px)] text-center w-full relative mx-auto flex flex-col gap-6">
             <h1 className="font-black text-2xl">AI-Driven Media Orchestrator</h1>
             <p className="font-bold text-xl">Upload an image to Extract its DNA:</p>
             <ul className="list-disc list-inside">
@@ -65,7 +65,6 @@ export default function UploadSection({uploadDisabled, onUploadBegin, onUploadCo
                 <li><strong>Image Analysis</strong>: Composition, Spacial Analysis</li>
             </ul>
             <p>Because this is a free app, uploads are limited to 2mb and 1 image at a time</p>
-            <p>No information is saved on any servers. All image data is sent to Gemini inline with the request and is not saved.</p>
             {errorMessage && (
                 <p className="text-red-500">{errorMessage}</p>
             )}
@@ -77,9 +76,7 @@ export default function UploadSection({uploadDisabled, onUploadBegin, onUploadCo
             )}
             {uploadDisabled && (
                 <p className="text-red-500 text-xl">Thank you for your interest in this app. It is currently unavailable. Please check again soon.</p>
-            )}
-            
-            
+            )} 
         </section>
     )
 }

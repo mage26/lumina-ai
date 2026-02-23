@@ -16,7 +16,7 @@ export default function Section({children, title, className = ''}: Props) {
             <h2 className="text-xl font-bold bg-primary text-primarycontrast p-4 rounded-t-2xl">
                 {title}
             </h2>
-            <div className="p-4 h-full">
+            <div className="p-4">
                 {children}
             </div>
         </section>

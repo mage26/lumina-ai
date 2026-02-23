@@ -19,7 +19,7 @@ export default function Analysis({metadata, colors, imageData, analysis }: Props
     return ( 
     <section className="w-full flex flex-wrap gap-6 py-10 px-4">
         <Section className=" md:w-[63%]" title="IMAGE">
-            <div className="h-[calc(100%-60px)] relative">
+            <div className="h-full aspect-square relative">
                 <Image
                     src={imageData}
                     alt={metadata.altText}

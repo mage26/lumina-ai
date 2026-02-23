@@ -33,6 +33,9 @@ export default async function analyzeImage(base64Data: string, mimeType: string)
             },
             { text: prompt }
         ],
+        config: {
+            responseMimeType: "application/json",
+        }
     });
 
     if(result?.text) {
