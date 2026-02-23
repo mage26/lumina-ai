@@ -30,7 +30,7 @@ export default function PageSection({uploadDisabled} : {uploadDisabled: boolean;
                     <UploadSection 
                         onUploadBegin={() => setIsLoading(true)}
                         onUploadComplete={(data) => {
-                            console.log("DATA", data);
+                            //console.log("DATA", data);
                             setIsLoading(false);
                             setMetadata(data.assetMetadata);
                             setColors(data.designTokens);
