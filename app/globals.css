@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #dfe3e7;
+  --foreground: #f2f5f7;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-primary: #ffffff;
+  --color-secondary: #eeeeee;
+  --color-accent: #000000;
+
+  --color-primarycontrast: #000000;
+  --color-secondarycontrast: #000000;
+  --color-accentcontrast: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.loader {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4/3;
+  border: 5px solid #000;
+  padding: 0 8px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(#fff 0 0) 0    0/16px 40px,
+    linear-gradient(#fff 0 0) 100% 0/16px 40px,
+    radial-gradient(farthest-side,#fff 90%,#0000) 0 5px/16px 16px content-box,
+    #000;
+  background-repeat: no-repeat; 
+  animation: l3 5s infinite linear;
+}
+@keyframes l3{
+  25% {background-position: 0 0   ,100% 100%,100% calc(100% - 5px)}
+  50% {background-position: 0 100%,100% 100%,0    calc(100% - 5px)}
+  75% {background-position: 0 100%,100%    0,100% 5px}
 }
